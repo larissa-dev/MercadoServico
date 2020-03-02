@@ -75,4 +75,11 @@ public class Categoria implements Serializable{            //deve ser identica a
         return true;
     }
 
+    @Override
+    public String toString() {
+        return "Categoria{" + "id=" + id + ", descricao=" + descricao + '}';
+    }
+    
+    
+
 }
