@@ -7,9 +7,12 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        <h:form>
-            <h:commandLink action="private/cadastros/categoria/list.xhtml" value="Categorias"/>
-        </h:form>
+        <h1>Categorias</h1>
+        <p:dataTable value="#{categoriaMB.categorias}" var="categoria">            <!--lista categoria da tabela usando EL -->
+            <p:column headerText="Descição"> 
+                #{categoria.descricao}                                              <!-- Imprimindo a tabela-->
+            </p:column>
+        </p:dataTable>
     </h:body>
 </html>
 

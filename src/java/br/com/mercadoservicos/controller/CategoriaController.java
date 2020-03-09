@@ -18,7 +18,7 @@ public class CategoriaController {
     private Integer id;
     private String descricao;
     private List<Categoria> categorias;
-    private CategoriaService categoriaService;
+    private CategoriaService categoriaService = new CategoriaService();
     
     public CategoriaController(){
         listar();//view vai ter referencia na MB,quando o compilador vai le vai instanciar uma categoriaController e vai passar para um construtor e a tabela vai vim prenchida.
