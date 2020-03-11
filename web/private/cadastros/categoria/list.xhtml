@@ -8,11 +8,13 @@
     </h:head>
     <h:body>
         <h1>Categorias</h1>
-        <p:dataTable value="#{categoriaMB.categorias}" var="categoria">            <!--lista categoria da tabela usando EL -->
-            <p:column headerText="Teste"> 
+        <p:dataTable value="#{categoriaMB.categorias}" var="categoria"
+                     emptyMessage="Nenhum registro encontrado">            <!--lista categoria da tabela usando EL -->
+            <p:column headerText="Descrição"> 
                 #{categoria.descricao}                                              <!-- Imprimindo a tabela-->
             </p:column>
         </p:dataTable>
+        <p:commandButton value="Novo" action="#{categoriaMB.novo()}"/>
     </h:body>
 </html>
 
